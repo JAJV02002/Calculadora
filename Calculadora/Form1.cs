@@ -142,13 +142,28 @@ namespace Calculadora
                     Sub = obj2.Substraction((first), (second));
                     TxtScreen.Text = Sub.ToString();
                     break;
+
+                case "x":
+                    Mul = obj3.Multiply((first), (second));
+                    TxtScreen.Text = Mul.ToString();
+                    break;
+
+                case "/":
+                    Div = obj4.Divide((first), (second));
+                    TxtScreen.Text = Div.ToString();
+                    break;
+
+                case "%":
+                    Per = obj5.Percentage((first), (second));
+                    TxtScreen.Text = Per.ToString();
+                    break;
             }
 
 
         }
         private void OffBttn_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void ClearScreenBttn_Click(object sender, EventArgs e)
