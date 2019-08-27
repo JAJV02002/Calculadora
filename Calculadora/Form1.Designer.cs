@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Screen = new System.Windows.Forms.TextBox();
+            this.TxtScreen = new System.Windows.Forms.TextBox();
             this.Number7 = new System.Windows.Forms.Button();
             this.Number8 = new System.Windows.Forms.Button();
             this.Number9 = new System.Windows.Forms.Button();
@@ -47,18 +47,23 @@
             this.ClearNumberBttn = new System.Windows.Forms.Button();
             this.ClearScreenBttn = new System.Windows.Forms.Button();
             this.OffBttn = new System.Windows.Forms.Button();
+            this.DotBttn = new System.Windows.Forms.Button();
+            this.PercentageBttn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // Screen
+            // TxtScreen
             // 
-            this.Screen.BackColor = System.Drawing.Color.GhostWhite;
-            this.Screen.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Screen.Location = new System.Drawing.Point(12, 37);
-            this.Screen.Multiline = true;
-            this.Screen.Name = "Screen";
-            this.Screen.Size = new System.Drawing.Size(413, 59);
-            this.Screen.TabIndex = 0;
-            this.Screen.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
+            this.TxtScreen.BackColor = System.Drawing.Color.Ivory;
+            this.TxtScreen.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtScreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtScreen.Location = new System.Drawing.Point(12, 37);
+            this.TxtScreen.Multiline = true;
+            this.TxtScreen.Name = "TxtScreen";
+            this.TxtScreen.Size = new System.Drawing.Size(403, 59);
+            this.TxtScreen.TabIndex = 0;
+            this.TxtScreen.Text = "0";
+            this.TxtScreen.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtScreen.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
             // 
             // Number7
             // 
@@ -71,6 +76,7 @@
             this.Number7.TabIndex = 1;
             this.Number7.Text = "7";
             this.Number7.UseVisualStyleBackColor = false;
+            this.Number7.Click += new System.EventHandler(this.Number7_Click);
             // 
             // Number8
             // 
@@ -83,6 +89,7 @@
             this.Number8.TabIndex = 8;
             this.Number8.Text = "8";
             this.Number8.UseVisualStyleBackColor = false;
+            this.Number8.Click += new System.EventHandler(this.Number8_Click);
             // 
             // Number9
             // 
@@ -121,6 +128,7 @@
             this.Number5.TabIndex = 5;
             this.Number5.Text = "5";
             this.Number5.UseVisualStyleBackColor = false;
+            this.Number5.Click += new System.EventHandler(this.Number5_Click);
             // 
             // Number6
             // 
@@ -133,6 +141,7 @@
             this.Number6.TabIndex = 6;
             this.Number6.Text = "6";
             this.Number6.UseVisualStyleBackColor = false;
+            this.Number6.Click += new System.EventHandler(this.Number6_Click);
             // 
             // Number1
             // 
@@ -145,6 +154,7 @@
             this.Number1.TabIndex = 7;
             this.Number1.Text = "1";
             this.Number1.UseVisualStyleBackColor = false;
+            this.Number1.Click += new System.EventHandler(this.Number1_Click);
             // 
             // Number2
             // 
@@ -157,6 +167,7 @@
             this.Number2.TabIndex = 8;
             this.Number2.Text = "2";
             this.Number2.UseVisualStyleBackColor = false;
+            this.Number2.Click += new System.EventHandler(this.Number2_Click);
             // 
             // Number3
             // 
@@ -182,42 +193,46 @@
             this.Number0.TabIndex = 12;
             this.Number0.Text = "0";
             this.Number0.UseVisualStyleBackColor = false;
+            this.Number0.Click += new System.EventHandler(this.Number0_Click);
             // 
             // EqualsBottn
             // 
             this.EqualsBottn.BackColor = System.Drawing.Color.Navy;
             this.EqualsBottn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EqualsBottn.ForeColor = System.Drawing.Color.GhostWhite;
-            this.EqualsBottn.Location = new System.Drawing.Point(12, 494);
+            this.EqualsBottn.Location = new System.Drawing.Point(229, 494);
             this.EqualsBottn.Name = "EqualsBottn";
             this.EqualsBottn.Size = new System.Drawing.Size(88, 71);
             this.EqualsBottn.TabIndex = 13;
             this.EqualsBottn.Text = "=";
             this.EqualsBottn.UseVisualStyleBackColor = false;
+            this.EqualsBottn.Click += new System.EventHandler(this.EqualsBottn_Click);
             // 
             // SubstractionBttn
             // 
             this.SubstractionBttn.BackColor = System.Drawing.Color.Navy;
             this.SubstractionBttn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SubstractionBttn.ForeColor = System.Drawing.Color.GhostWhite;
-            this.SubstractionBttn.Location = new System.Drawing.Point(229, 494);
+            this.SubstractionBttn.Location = new System.Drawing.Point(332, 407);
             this.SubstractionBttn.Name = "SubstractionBttn";
             this.SubstractionBttn.Size = new System.Drawing.Size(88, 71);
             this.SubstractionBttn.TabIndex = 14;
             this.SubstractionBttn.Text = "-";
             this.SubstractionBttn.UseVisualStyleBackColor = false;
+            this.SubstractionBttn.Click += new System.EventHandler(this.SubstractionBttn_Click);
             // 
             // AddBttn
             // 
             this.AddBttn.BackColor = System.Drawing.Color.Navy;
             this.AddBttn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddBttn.ForeColor = System.Drawing.Color.GhostWhite;
-            this.AddBttn.Location = new System.Drawing.Point(332, 407);
+            this.AddBttn.Location = new System.Drawing.Point(332, 494);
             this.AddBttn.Name = "AddBttn";
-            this.AddBttn.Size = new System.Drawing.Size(88, 158);
+            this.AddBttn.Size = new System.Drawing.Size(88, 71);
             this.AddBttn.TabIndex = 15;
             this.AddBttn.Text = "+";
             this.AddBttn.UseVisualStyleBackColor = false;
+            this.AddBttn.Click += new System.EventHandler(this.AddBttn_Click);
             // 
             // MultiplyBttn
             // 
@@ -230,6 +245,7 @@
             this.MultiplyBttn.TabIndex = 16;
             this.MultiplyBttn.Text = "x";
             this.MultiplyBttn.UseVisualStyleBackColor = false;
+            this.MultiplyBttn.Click += new System.EventHandler(this.MultiplyBttn_Click);
             // 
             // DivideBttn
             // 
@@ -242,6 +258,7 @@
             this.DivideBttn.TabIndex = 17;
             this.DivideBttn.Text = "/";
             this.DivideBttn.UseVisualStyleBackColor = false;
+            this.DivideBttn.Click += new System.EventHandler(this.DivideBttn_Click);
             // 
             // ClearNumberBttn
             // 
@@ -254,6 +271,7 @@
             this.ClearNumberBttn.TabIndex = 18;
             this.ClearNumberBttn.Text = "C";
             this.ClearNumberBttn.UseVisualStyleBackColor = false;
+            this.ClearNumberBttn.Click += new System.EventHandler(this.ClearNumberBttn_Click);
             // 
             // ClearScreenBttn
             // 
@@ -266,25 +284,55 @@
             this.ClearScreenBttn.TabIndex = 19;
             this.ClearScreenBttn.Text = "CE";
             this.ClearScreenBttn.UseVisualStyleBackColor = false;
+            this.ClearScreenBttn.Click += new System.EventHandler(this.ClearScreenBttn_Click);
             // 
             // OffBttn
             // 
             this.OffBttn.BackColor = System.Drawing.Color.DarkRed;
             this.OffBttn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OffBttn.ForeColor = System.Drawing.Color.GhostWhite;
-            this.OffBttn.Location = new System.Drawing.Point(332, 141);
+            this.OffBttn.Location = new System.Drawing.Point(229, 141);
             this.OffBttn.Name = "OffBttn";
             this.OffBttn.Size = new System.Drawing.Size(88, 71);
             this.OffBttn.TabIndex = 20;
             this.OffBttn.Text = "OFF";
             this.OffBttn.UseVisualStyleBackColor = false;
+            this.OffBttn.Click += new System.EventHandler(this.OffBttn_Click);
+            // 
+            // DotBttn
+            // 
+            this.DotBttn.BackColor = System.Drawing.Color.Navy;
+            this.DotBttn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DotBttn.ForeColor = System.Drawing.Color.GhostWhite;
+            this.DotBttn.Location = new System.Drawing.Point(12, 494);
+            this.DotBttn.Name = "DotBttn";
+            this.DotBttn.Size = new System.Drawing.Size(88, 71);
+            this.DotBttn.TabIndex = 21;
+            this.DotBttn.Text = ".";
+            this.DotBttn.UseVisualStyleBackColor = false;
+            this.DotBttn.Click += new System.EventHandler(this.DotBttn_Click);
+            // 
+            // PercentageBttn
+            // 
+            this.PercentageBttn.BackColor = System.Drawing.Color.Navy;
+            this.PercentageBttn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PercentageBttn.ForeColor = System.Drawing.Color.GhostWhite;
+            this.PercentageBttn.Location = new System.Drawing.Point(332, 141);
+            this.PercentageBttn.Name = "PercentageBttn";
+            this.PercentageBttn.Size = new System.Drawing.Size(88, 71);
+            this.PercentageBttn.TabIndex = 22;
+            this.PercentageBttn.Text = "%";
+            this.PercentageBttn.UseVisualStyleBackColor = false;
+            this.PercentageBttn.Click += new System.EventHandler(this.PercentageBttn_Click);
             // 
             // Calculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(437, 577);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(427, 577);
+            this.Controls.Add(this.PercentageBttn);
+            this.Controls.Add(this.DotBttn);
             this.Controls.Add(this.OffBttn);
             this.Controls.Add(this.ClearScreenBttn);
             this.Controls.Add(this.ClearNumberBttn);
@@ -303,7 +351,7 @@
             this.Controls.Add(this.Number9);
             this.Controls.Add(this.Number8);
             this.Controls.Add(this.Number7);
-            this.Controls.Add(this.Screen);
+            this.Controls.Add(this.TxtScreen);
             this.Name = "Calculadora";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -316,7 +364,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox Screen;
+        private System.Windows.Forms.TextBox TxtScreen;
         private System.Windows.Forms.Button Number7;
         private System.Windows.Forms.Button Number8;
         private System.Windows.Forms.Button Number9;
@@ -335,6 +383,8 @@
         private System.Windows.Forms.Button ClearNumberBttn;
         private System.Windows.Forms.Button ClearScreenBttn;
         private System.Windows.Forms.Button OffBttn;
+        private System.Windows.Forms.Button DotBttn;
+        private System.Windows.Forms.Button PercentageBttn;
     }
 }
 

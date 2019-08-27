@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\ClsAdd.cs" />
+    <Compile Include="Classes\ClsDivide.cs" />
+    <Compile Include="Classes\ClsMultiply.cs" />
+    <Compile Include="Classes\ClsPercentage.cs" />
+    <Compile Include="Classes\ClsSubstraction.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
